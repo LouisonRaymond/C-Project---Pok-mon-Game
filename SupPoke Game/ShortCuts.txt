@@ -1,0 +1,18 @@
+Dev ShortCut : 
+
+CTRL / (multi comment)
+
+SHIFT TAB   (ident back)
+
+TAB  (ident in)
+
+ALT UP DOWN  (move selection)
+
+Github push tips :
+
+ADD ......   -> new function  / something 
+
+MOD .....    -> modif a function  / something 
+
+
+

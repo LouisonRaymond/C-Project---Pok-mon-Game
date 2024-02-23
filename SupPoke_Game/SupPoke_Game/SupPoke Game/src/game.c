@@ -10,6 +10,7 @@
 #include "../include/game.h"
 #include "../include/shop.h"
 #include "../include/fight.h"
+#include "../include/supinit.h"
 
 int menu_start()
 {
@@ -34,7 +35,7 @@ int menu_firstsupemon()
     printf("|    2 - SupAsaur              |\n");
     printf("|    3 - SupIrtler             |\n");
     printf("+------------------------------+\n\n");
-        
+
     printf("Your choice (1, 2 or 3) : ");
     scanf("%d", &choice);
     while (choice < 1 || choice > 3)
@@ -43,6 +44,8 @@ int menu_firstsupemon()
         printf("Your choice (1, 2 or 3) : ");
         scanf("%d", &choice);
     }
+
+    add_supemon_player(choice);
 
     return choice;
 

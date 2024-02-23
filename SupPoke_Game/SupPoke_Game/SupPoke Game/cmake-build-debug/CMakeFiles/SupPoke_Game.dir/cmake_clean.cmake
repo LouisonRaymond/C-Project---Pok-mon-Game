@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/SupPoke_Game.dir/include/supinit.c.obj"
+  "CMakeFiles/SupPoke_Game.dir/include/supinit.c.obj.d"
   "CMakeFiles/SupPoke_Game.dir/main.c.obj"
   "CMakeFiles/SupPoke_Game.dir/main.c.obj.d"
   "CMakeFiles/SupPoke_Game.dir/src/fight.c.obj"

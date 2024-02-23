@@ -128,6 +128,30 @@ SupPoke_Game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/build
 .PHONY : SupPoke_Game/fast
 
+include/supinit.obj: include/supinit.c.obj
+.PHONY : include/supinit.obj
+
+# target to build an object file
+include/supinit.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/include/supinit.c.obj
+.PHONY : include/supinit.c.obj
+
+include/supinit.i: include/supinit.c.i
+.PHONY : include/supinit.i
+
+# target to preprocess a source file
+include/supinit.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/include/supinit.c.i
+.PHONY : include/supinit.c.i
+
+include/supinit.s: include/supinit.c.s
+.PHONY : include/supinit.s
+
+# target to generate assembly for a file
+include/supinit.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/include/supinit.c.s
+.PHONY : include/supinit.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -257,6 +281,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... SupPoke_Game
+	@echo ... include/supinit.obj
+	@echo ... include/supinit.i
+	@echo ... include/supinit.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

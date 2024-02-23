@@ -1,6 +1,8 @@
 #ifndef STRUCT_H
 #define STRUCT_H
 
+#define MAX_SUPEMON 6
+
 // Structure qui contient les informations du joueur
 extern struct player
 {
@@ -10,7 +12,7 @@ extern struct player
     int super_potions;
     int rare_candy;
     int current_supemon;
-    int supemon[6];
+    int supemon[MAX_SUPEMON];
 
 } player;
 

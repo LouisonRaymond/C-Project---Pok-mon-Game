@@ -2,6 +2,8 @@ Dev ShortCut :
 
 CTRL / (multi comment)
 
+CTRL CLIC (on word tp to the variables)
+
 SHIFT TAB   (ident back)
 
 TAB  (ident in)
@@ -14,5 +16,7 @@ ADD ......   -> new function  / something
 
 MOD .....    -> modif a function  / something 
 
+comment everythings plz
 
+erreur rose = je la regle direct / je push pas un truc qui fait buger le main 
 

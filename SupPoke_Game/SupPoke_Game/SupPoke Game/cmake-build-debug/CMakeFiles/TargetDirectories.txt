@@ -1,0 +1,3 @@
+C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/cmake-build-debug/CMakeFiles/SupPoke_Game.dir
+C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/cmake-build-debug/CMakeFiles/rebuild_cache.dir

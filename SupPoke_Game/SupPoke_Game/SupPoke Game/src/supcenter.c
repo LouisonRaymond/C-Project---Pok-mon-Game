@@ -7,7 +7,7 @@
 
 // Include librairie perso
 #include "../include/struct.h"
-
+/*
 int menu_sup_center()
 {
     int choice = 0;
@@ -76,7 +76,7 @@ int menu_sup_center()
     }
 
     return 0;
-}
+}*/
 
 
 

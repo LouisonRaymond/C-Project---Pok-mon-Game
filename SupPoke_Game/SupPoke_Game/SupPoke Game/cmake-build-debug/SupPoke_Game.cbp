@@ -93,9 +93,6 @@
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/include/supcenter.h">
 			<Option target="SupPoke_Game"/>
 		</Unit>
-		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/include/supinit.c">
-			<Option target="SupPoke_Game"/>
-		</Unit>
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/include/supinit.h">
 			<Option target="SupPoke_Game"/>
 		</Unit>
@@ -111,7 +108,13 @@
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/shop.c">
 			<Option target="SupPoke_Game"/>
 		</Unit>
+		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/struct.c">
+			<Option target="SupPoke_Game"/>
+		</Unit>
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/supcenter.c">
+			<Option target="SupPoke_Game"/>
+		</Unit>
+		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/supinit.c">
 			<Option target="SupPoke_Game"/>
 		</Unit>
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/CMakeLists.txt">

@@ -8,12 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/include/supinit.c" "CMakeFiles/SupPoke_Game.dir/include/supinit.c.obj" "gcc" "CMakeFiles/SupPoke_Game.dir/include/supinit.c.obj.d"
   "C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/main.c" "CMakeFiles/SupPoke_Game.dir/main.c.obj" "gcc" "CMakeFiles/SupPoke_Game.dir/main.c.obj.d"
   "C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/fight.c" "CMakeFiles/SupPoke_Game.dir/src/fight.c.obj" "gcc" "CMakeFiles/SupPoke_Game.dir/src/fight.c.obj.d"
   "C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/game.c" "CMakeFiles/SupPoke_Game.dir/src/game.c.obj" "gcc" "CMakeFiles/SupPoke_Game.dir/src/game.c.obj.d"
   "C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/shop.c" "CMakeFiles/SupPoke_Game.dir/src/shop.c.obj" "gcc" "CMakeFiles/SupPoke_Game.dir/src/shop.c.obj.d"
+  "C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/struct.c" "CMakeFiles/SupPoke_Game.dir/src/struct.c.obj" "gcc" "CMakeFiles/SupPoke_Game.dir/src/struct.c.obj.d"
   "C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/supcenter.c" "CMakeFiles/SupPoke_Game.dir/src/supcenter.c.obj" "gcc" "CMakeFiles/SupPoke_Game.dir/src/supcenter.c.obj.d"
+  "C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/supinit.c" "CMakeFiles/SupPoke_Game.dir/src/supinit.c.obj" "gcc" "CMakeFiles/SupPoke_Game.dir/src/supinit.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

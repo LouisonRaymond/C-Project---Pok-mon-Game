@@ -17,4 +17,5 @@ add_executable(SupPoke_Game
         src/supcenter.c
         main.c
         include/supinit.h
-        src/supinit.c)
+        src/supinit.c
+)

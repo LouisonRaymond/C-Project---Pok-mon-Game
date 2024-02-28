@@ -128,30 +128,6 @@ SupPoke_Game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/build
 .PHONY : SupPoke_Game/fast
 
-include/supinit.obj: include/supinit.c.obj
-.PHONY : include/supinit.obj
-
-# target to build an object file
-include/supinit.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/include/supinit.c.obj
-.PHONY : include/supinit.c.obj
-
-include/supinit.i: include/supinit.c.i
-.PHONY : include/supinit.i
-
-# target to preprocess a source file
-include/supinit.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/include/supinit.c.i
-.PHONY : include/supinit.c.i
-
-include/supinit.s: include/supinit.c.s
-.PHONY : include/supinit.s
-
-# target to generate assembly for a file
-include/supinit.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/include/supinit.c.s
-.PHONY : include/supinit.c.s
-
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -248,6 +224,30 @@ src/shop.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/shop.c.s
 .PHONY : src/shop.c.s
 
+src/struct.obj: src/struct.c.obj
+.PHONY : src/struct.obj
+
+# target to build an object file
+src/struct.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/struct.c.obj
+.PHONY : src/struct.c.obj
+
+src/struct.i: src/struct.c.i
+.PHONY : src/struct.i
+
+# target to preprocess a source file
+src/struct.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/struct.c.i
+.PHONY : src/struct.c.i
+
+src/struct.s: src/struct.c.s
+.PHONY : src/struct.s
+
+# target to generate assembly for a file
+src/struct.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/struct.c.s
+.PHONY : src/struct.c.s
+
 src/supcenter.obj: src/supcenter.c.obj
 .PHONY : src/supcenter.obj
 
@@ -272,6 +272,30 @@ src/supcenter.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/supcenter.c.s
 .PHONY : src/supcenter.c.s
 
+src/supinit.obj: src/supinit.c.obj
+.PHONY : src/supinit.obj
+
+# target to build an object file
+src/supinit.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/supinit.c.obj
+.PHONY : src/supinit.c.obj
+
+src/supinit.i: src/supinit.c.i
+.PHONY : src/supinit.i
+
+# target to preprocess a source file
+src/supinit.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/supinit.c.i
+.PHONY : src/supinit.c.i
+
+src/supinit.s: src/supinit.c.s
+.PHONY : src/supinit.s
+
+# target to generate assembly for a file
+src/supinit.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/supinit.c.s
+.PHONY : src/supinit.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -281,9 +305,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... SupPoke_Game
-	@echo ... include/supinit.obj
-	@echo ... include/supinit.i
-	@echo ... include/supinit.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
@@ -296,9 +317,15 @@ help:
 	@echo ... src/shop.obj
 	@echo ... src/shop.i
 	@echo ... src/shop.s
+	@echo ... src/struct.obj
+	@echo ... src/struct.i
+	@echo ... src/struct.s
 	@echo ... src/supcenter.obj
 	@echo ... src/supcenter.i
 	@echo ... src/supcenter.s
+	@echo ... src/supinit.obj
+	@echo ... src/supinit.i
+	@echo ... src/supinit.s
 .PHONY : help
 
 

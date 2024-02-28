@@ -15,7 +15,7 @@
 int menu_start()
 {
     printf("Hi Young Adventurer\n");
-    printf("Him the SupProfessor\n");
+    printf("I'm the SupProfessor\n");
     printf("May you tell me your name ?\n");
     printf("Name : ");
     scanf("%19s", player.name);
@@ -33,7 +33,7 @@ int menu_firstsupemon()
     printf("|  Choose your first SuPemon   |\n");
     printf("|    1 - SupMander             |\n");
     printf("|    2 - SupAsaur              |\n");
-    printf("|    3 - SupIrtler             |\n");
+    printf("|    3 - SupIrtle              |\n");
     printf("+------------------------------+\n\n");
 
     printf("Your choice (1, 2 or 3) : ");
@@ -45,7 +45,13 @@ int menu_firstsupemon()
         scanf("%d", &choice);
     }
 
-    add_supemon_player(choice);
+    switch (choice)
+    {
+        case 1:
+            copy_supemon(&SupIrtle, player.current_supemon);
+        default:
+            break;
+    }
 
     return choice;
 
@@ -88,7 +94,6 @@ int menu_menu()
         break;
     case 5:
         exit(0);
-        break;
     
     default:
         break;
@@ -96,4 +101,78 @@ int menu_menu()
 
 
     return 0;
-} 
+}
+
+int menu_bag()
+{
+    int choice = 0;
+
+    printf("+------------------------------+\n");
+    printf("(1)You Have %d potions\n", player.potions);
+    printf("(2)You Have %d super potions\n", player.super_potions);
+    printf("(3)You Have %d rare candies\n", player.rare_candy);
+    printf("This item will be used on (your current Supemon)%s\n", player.current_supemon->name);
+    printf("+------------------------------+\n");
+    printf("What do you want to use ? ");
+    scanf("%d", &choice);
+    while (choice < 1 || choice > 3)
+    {
+        printf("Invalid choice\n");
+        printf("Your choice (1, 2 or 3) : ");
+        scanf("%d", &choice);
+    }
+
+    switch (choice) {
+        case 1:
+            if (player.potions > 0)
+            {
+                player.current_supemon->hp += 5;
+                if (player.current_supemon->hp > player.current_supemon->max_hp)
+                {
+                    player.current_supemon->hp = player.current_supemon->max_hp;
+                }
+                player.potions--;
+            }
+            else
+            {
+                printf("You don't have any potions\n");
+            }
+            break;
+        case 2:
+            if (player.super_potions > 0)
+            {
+                player.current_supemon->hp += 10;
+                if (player.current_supemon->hp > player.current_supemon->max_hp)
+                {
+                    player.current_supemon->hp = player.current_supemon->max_hp;
+                }
+                player.super_potions--;
+            }
+            else
+            {
+                printf("You don't have any super potions\n");
+            }
+            break;
+        case 3:
+            if (player.rare_candy > 0)
+            {
+                player.current_supemon->level++;
+                player.rare_candy--;
+            }
+            else
+            {
+                printf("You don't have any rare candies\n");
+            }
+            break;
+        default:
+            break;
+    }
+
+    return choice;
+}
+
+int menu_chose_supemon()
+{
+
+    return 0;
+}

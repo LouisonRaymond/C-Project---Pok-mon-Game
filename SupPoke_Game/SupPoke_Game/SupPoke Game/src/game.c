@@ -48,7 +48,17 @@ int menu_firstsupemon()
     switch (choice)
     {
         case 1:
+            copy_supemon(&SupMander, player.current_supemon);
+            copy_supemon(player.current_supemon, player.supemons[0]);
+            break;
+        case 2:
+            copy_supemon(&SupAsaur, player.current_supemon);
+            copy_supemon(player.current_supemon, player.supemons[0]);
+            break;
+        case 3:
             copy_supemon(&SupIrtle, player.current_supemon);
+            copy_supemon(player.current_supemon, player.supemons[0]);
+            break;
         default:
             break;
     }

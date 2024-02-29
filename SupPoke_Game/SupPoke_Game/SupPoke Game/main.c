@@ -108,7 +108,7 @@ int main() {
     printf("%d\n", player.supemons[0]->evasion);
     */
 
-    
+
     // Lancement du jeux
     // menu_start();
     // menu_firstsupemon();

@@ -224,30 +224,6 @@ src/shop.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/shop.c.s
 .PHONY : src/shop.c.s
 
-src/struct.obj: src/struct.c.obj
-.PHONY : src/struct.obj
-
-# target to build an object file
-src/struct.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/struct.c.obj
-.PHONY : src/struct.c.obj
-
-src/struct.i: src/struct.c.i
-.PHONY : src/struct.i
-
-# target to preprocess a source file
-src/struct.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/struct.c.i
-.PHONY : src/struct.c.i
-
-src/struct.s: src/struct.c.s
-.PHONY : src/struct.s
-
-# target to generate assembly for a file
-src/struct.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/struct.c.s
-.PHONY : src/struct.c.s
-
 src/supcenter.obj: src/supcenter.c.obj
 .PHONY : src/supcenter.obj
 
@@ -317,9 +293,6 @@ help:
 	@echo ... src/shop.obj
 	@echo ... src/shop.i
 	@echo ... src/shop.s
-	@echo ... src/struct.obj
-	@echo ... src/struct.i
-	@echo ... src/struct.s
 	@echo ... src/supcenter.obj
 	@echo ... src/supcenter.i
 	@echo ... src/supcenter.s

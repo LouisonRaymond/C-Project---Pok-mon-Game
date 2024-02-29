@@ -58,7 +58,7 @@ int menu_fight()
 int menu_fight_player_turn()
 {
     printf("Your Turn \n\n");
-
+    printf("%s\n",wild_supemon.name);
 
 
 

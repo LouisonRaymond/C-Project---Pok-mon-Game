@@ -7,8 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/SupPoke_Game.dir/src/game.c.obj.d"
   "CMakeFiles/SupPoke_Game.dir/src/shop.c.obj"
   "CMakeFiles/SupPoke_Game.dir/src/shop.c.obj.d"
-  "CMakeFiles/SupPoke_Game.dir/src/struct.c.obj"
-  "CMakeFiles/SupPoke_Game.dir/src/struct.c.obj.d"
   "CMakeFiles/SupPoke_Game.dir/src/supcenter.c.obj"
   "CMakeFiles/SupPoke_Game.dir/src/supcenter.c.obj.d"
   "CMakeFiles/SupPoke_Game.dir/src/supinit.c.obj"

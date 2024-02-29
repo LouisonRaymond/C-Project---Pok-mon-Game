@@ -12,6 +12,8 @@
 
 struct player player;
 
+struct wild_supemon wild_supemon;
+
 struct supemon SupMander =
         {
                 "SupMander", // Nom du Supemon
@@ -97,15 +99,16 @@ int main() {
             return 1;
         }
     }
-
+    /*
     copy_supemon(&SupIrtle, player.current_supemon);
     printf("%d\n", player.current_supemon->evasion);
 
     copy_supemon(player.current_supemon, player.supemons[0]);
     printf("le supemon en position 1 a : evasion");
     printf("%d\n", player.supemons[0]->evasion);
+    */
 
-
+    
     // Lancement du jeux
     // menu_start();
     // menu_firstsupemon();

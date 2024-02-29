@@ -176,9 +176,6 @@ CMakeFiles/SupPoke_Game.dir/src/shop.c.obj: C:/Users/Peon4/OneDrive/Documents/Gi
   C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke\ Game/include/shop.h \
   C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke\ Game/include/struct.h
 
-CMakeFiles/SupPoke_Game.dir/src/struct.c.obj: C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke\ Game/src/struct.c \
-  C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke\ Game/include/struct.h
-
 CMakeFiles/SupPoke_Game.dir/src/supcenter.c.obj: C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke\ Game/src/supcenter.c \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
@@ -363,8 +360,6 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include
 C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke\ Game/include/supcenter.h:
 
 C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke\ Game/src/shop.c:
-
-C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke\ Game/src/struct.c:
 
 C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke\ Game/src/supcenter.c:
 

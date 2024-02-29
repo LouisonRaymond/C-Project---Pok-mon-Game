@@ -8,48 +8,8 @@
 #include "../include/struct.h"
 #include "../include/supcenter.h"
 #include "../include/supinit.h"
-/*
-void add_supemon_player(int supemon_s)
-{
-    if(player.current_supemon < MAX_SUPEMON)
-    {
-        player.supemon[player.current_supemon++] = supemon_s; // augmente le compteur currentsupmeon de 1
-        printf("you have obtained %s !\n", supemon_s == 1 ? "SupMander" : (supemon_s == 2 ? "SupAsaur": "SupIrtle" )); //si supemon_s=1 est choisi alors on va choisir SupMander etc etc
-    }
-    else
-    {
-        printf("Your Team is full !");
-    }
-}*/
 
-/*int create_new_supemon()
-{
-    srand(time(NULL));
-    int nbrAlea = rand() % 3 + 1;  // nbr alea entre 1 et 3
 
-    switch (nbrAlea)
-    {
-        case 1:
-            add_supemon_player(1);
-            printf("testalea1passed");
-            break;
-
-        case 2:
-            add_supemon_player(2);
-            printf("testalea2passed");
-            break;
-
-        case 3:
-            add_supemon_player(3);
-            printf("testalea3passed");
-            break;
-
-        default:
-            printf("Invalid choice\n");
-            break;
-    }
-    return 0;
-}*/
 
 void copy_supemon(struct supemon *source, struct supemon *destination){
     // Copier le nom du Supémon
@@ -70,4 +30,30 @@ void copy_supemon(struct supemon *source, struct supemon *destination){
     destination->xp_to_next_level = source->xp_to_next_level;
     destination->evasion = source->evasion;
     destination->base_evasion = source->base_evasion;
+}
+
+void initialize_wild_supemon(struct player *player, struct wild_supemon *wild_supemon) {
+    struct supemon *current_supemon = player->current_supemon;
+
+    const char *wild_names[] = {"SupIrtle", "SupMander", "SupAsaur"};
+    int random_index = rand() % 3; // Générer un nombre aléatoire entre 0 et 2
+    strcpy(wild_supemon->name, wild_names[random_index]);
+
+    // Calculer les nouvelles statistiques en réduisant légèrement celles du Pokémon actuel
+    wild_supemon->hp = (int)(current_supemon->hp * 0.9); // Réduire la santé de 10%
+    wild_supemon->max_hp = (int)(current_supemon->max_hp * 0.9);
+    wild_supemon->attack = (int)(current_supemon->attack * 0.9);
+    wild_supemon->base_attack = (int)(current_supemon->base_attack * 0.9);
+    wild_supemon->defense = (int)(current_supemon->defense * 0.9);
+    wild_supemon->base_defense = (int)(current_supemon->base_defense * 0.9);
+    wild_supemon->speed = (int)(current_supemon->speed * 0.9);
+    wild_supemon->base_speed = (int)(current_supemon->base_speed * 0.9);
+    wild_supemon->accuracy = (int)(current_supemon->accuracy * 0.9);
+    wild_supemon->base_accuracy = (int)(current_supemon->base_accuracy * 0.9);
+    wild_supemon->level = current_supemon->level;
+    wild_supemon->xp = (int)(current_supemon->xp);
+    wild_supemon->xp_to_next_level = (int)(current_supemon->xp_to_next_level);
+    wild_supemon->evasion = (int)(current_supemon->evasion * 0.9); // Réduire l'esquive de 10%
+    wild_supemon->base_evasion = (int)(current_supemon->base_evasion * 0.9);
+    // Ajustez les statistiques comme nécessaire
 }

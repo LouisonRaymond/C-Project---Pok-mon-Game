@@ -16,7 +16,7 @@ extern struct player
 
 } player;
 
-// Structure qui contient les informations d'un SuPemon
+// Structure qui contient les informations d'un Supemon
 extern struct supemon
 {
     char name[20];

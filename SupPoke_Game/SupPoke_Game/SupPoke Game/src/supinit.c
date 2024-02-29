@@ -15,7 +15,7 @@ void copy_supemon(struct supemon *source, struct supemon *destination){
     // Copier le nom du Supémon
     strcpy(destination->name, source->name);
     // Copier les autres attributs du Supémon
-    destination->hp = source->hp;
+    destination->hp = source->hp;  //source p supemon i
     destination->max_hp = source->max_hp;
     destination->attack = source->attack;
     destination->base_attack = source->base_attack;

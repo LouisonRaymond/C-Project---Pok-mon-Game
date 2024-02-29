@@ -109,16 +109,15 @@ int main() {
     */
 
 
-    // Lancement du jeux
-    // menu_start();
-    // menu_firstsupemon();
+    // Lancement du jeu
+    menu_start();
+    menu_firstsupemon();
 
+    //Ingame Loop
     // while (1)
     // {
     //     menu_menu();
     // }
-
-    //Ingame Loop
 
 
     //libération de mémoire

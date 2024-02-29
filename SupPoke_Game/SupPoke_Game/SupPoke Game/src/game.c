@@ -11,6 +11,7 @@
 #include "../include/shop.h"
 #include "../include/fight.h"
 #include "../include/supinit.h"
+#include "../include/supcenter.h"
 
 int menu_start()
 {
@@ -97,7 +98,7 @@ int menu_menu()
         menu_shop();
         break;
     case 3:
-        //menu_supemon_center(); // a faire
+        menu_supemon_center();
         break;
     case 4:
         //save(); // a faire

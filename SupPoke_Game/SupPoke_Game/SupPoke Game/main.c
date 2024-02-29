@@ -29,7 +29,7 @@ struct supemon SupMander =
                 2,           // base_accuracy
                 1,           // level
                 0,           // xp
-                100,         // xp_to_next_level
+                500,         // xp_to_next_level
                 1,          //evasion
                 1,      //base_evasion
         };
@@ -49,7 +49,7 @@ struct supemon SupAsaur =
                 2,          // base_accuracy
                 1,          // level
                 0,          // xp
-                100,          // xp_to_next_level
+                500,          // xp_to_next_level
                 3,        // evasion
                 3   // base_evasion
         };
@@ -69,7 +69,7 @@ struct supemon SupIrtle =
                 1,          // base_accuracy
                 1,          // level
                 0,          // xp
-                0,          // xp_to_next_level
+                500,          // xp_to_next_level
                 2,          //evasion
                 2,      //base_evasion
 

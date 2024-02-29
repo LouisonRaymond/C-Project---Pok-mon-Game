@@ -3,6 +3,6 @@
 
 // Déclarations de fonctions pour le jeu
 
-int menu_sup_center();
+int menu_supemon_center();
 
 #endif // SUPCENTER_H

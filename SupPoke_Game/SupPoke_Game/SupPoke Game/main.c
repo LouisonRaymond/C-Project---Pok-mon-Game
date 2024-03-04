@@ -119,7 +119,6 @@ int main() {
     //     menu_menu();
     // }
 
-
     //libération de mémoire
     free(player.current_supemon);
 

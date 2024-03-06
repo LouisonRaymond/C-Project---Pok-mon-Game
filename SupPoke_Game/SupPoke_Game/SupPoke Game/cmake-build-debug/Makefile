@@ -200,6 +200,30 @@ src/game.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/game.c.s
 .PHONY : src/game.c.s
 
+src/save.obj: src/save.c.obj
+.PHONY : src/save.obj
+
+# target to build an object file
+src/save.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/save.c.obj
+.PHONY : src/save.c.obj
+
+src/save.i: src/save.c.i
+.PHONY : src/save.i
+
+# target to preprocess a source file
+src/save.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/save.c.i
+.PHONY : src/save.c.i
+
+src/save.s: src/save.c.s
+.PHONY : src/save.s
+
+# target to generate assembly for a file
+src/save.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/save.c.s
+.PHONY : src/save.c.s
+
 src/shop.obj: src/shop.c.obj
 .PHONY : src/shop.obj
 
@@ -290,6 +314,9 @@ help:
 	@echo ... src/game.obj
 	@echo ... src/game.i
 	@echo ... src/game.s
+	@echo ... src/save.obj
+	@echo ... src/save.i
+	@echo ... src/save.s
 	@echo ... src/shop.obj
 	@echo ... src/shop.i
 	@echo ... src/shop.s

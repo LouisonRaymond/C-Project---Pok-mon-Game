@@ -80,12 +80,12 @@ clean: CMakeFiles/SupPoke_Game.dir/clean
 CMakeFiles/SupPoke_Game.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke Game\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7 "Built target SupPoke_Game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke Game\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8 "Built target SupPoke_Game"
 .PHONY : CMakeFiles/SupPoke_Game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SupPoke_Game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke Game\cmake-build-debug\CMakeFiles" 7
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke Game\cmake-build-debug\CMakeFiles" 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/SupPoke_Game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke Game\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/SupPoke_Game.dir/rule

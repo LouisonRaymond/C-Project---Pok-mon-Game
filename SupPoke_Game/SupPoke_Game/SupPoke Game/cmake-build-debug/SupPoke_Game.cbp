@@ -84,6 +84,9 @@
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/include/game.h">
 			<Option target="SupPoke_Game"/>
 		</Unit>
+		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/include/save.h">
+			<Option target="SupPoke_Game"/>
+		</Unit>
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/include/shop.h">
 			<Option target="SupPoke_Game"/>
 		</Unit>
@@ -106,9 +109,6 @@
 			<Option target="SupPoke_Game"/>
 		</Unit>
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/save.c">
-			<Option target="SupPoke_Game"/>
-		</Unit>
-		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/save.h">
 			<Option target="SupPoke_Game"/>
 		</Unit>
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/shop.c">

@@ -9,7 +9,7 @@
 #include "struct.h"
 
 
-
+/*
 void save_game(struct player *player)
 {
     FILE *file = fopen("save.txt", "w");
@@ -29,6 +29,7 @@ void save_game(struct player *player)
         printf("impossible to open the current save file.\n");
     }
 }
+*/
 /*
 struct player_load_game()
 {

@@ -9,6 +9,9 @@
 #include "include/shop.h"
 #include "include/supinit.h"
 #include "include/game.h"
+#include "include/supcenter.h"
+#include "include/fight.h"
+#include "include/save.h"
 
 struct player player;
 
@@ -107,6 +110,14 @@ int main() {
     printf("le supemon en position 1 a : evasion");
     printf("%d\n", player.supemons[0]->evasion);
     */
+    player.current_supemon = &SupIrtle;
+    player.supemons[0] = &SupIrtle;
+    player.supemons[1] = &SupMander;
+    player.supemons[2] = &SupAsaur;
+    printf("le supemon en position 0 est : %s\n", player.supemons[0]->name);
+    menu_change_supemon();
+    printf("le supemon en position 0 est : %s\n", player.supemons[0]->name);
+
 
 
     // Lancement du jeu

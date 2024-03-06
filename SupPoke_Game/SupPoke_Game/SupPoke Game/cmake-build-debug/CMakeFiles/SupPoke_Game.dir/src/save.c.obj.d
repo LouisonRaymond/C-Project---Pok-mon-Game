@@ -1,5 +1,5 @@
-CMakeFiles/SupPoke_Game.dir/main.c.obj: \
- C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\main.c \
+CMakeFiles/SupPoke_Game.dir/src/save.c.obj: \
+ C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\src\save.c \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
@@ -35,10 +35,5 @@ CMakeFiles/SupPoke_Game.dir/main.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_timeval.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/pthread_time.h \
- C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\include/struct.h \
- C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\include/shop.h \
- C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\include/supinit.h \
- C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\include/game.h \
- C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\include/supcenter.h \
- C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\include/fight.h \
- C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\include/save.h
+ C:/Users/Peon4/OneDrive/DOCUME~1/GitHub/C-PROJ~1/SUPPOK~1/SUPPOK~1/SUPPOK~1/include/save.h \
+ C:/Users/Peon4/OneDrive/DOCUME~1/GitHub/C-PROJ~1/SUPPOK~1/SUPPOK~1/SUPPOK~1/include/struct.h

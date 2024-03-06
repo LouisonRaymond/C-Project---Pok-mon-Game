@@ -132,7 +132,6 @@ int menu_change_supemon()
 {
     int choice = 0;
 
-    printf("Choose a Supemon to Swap with\n");
     for (int i = 0; i < 6; i++)
     {
         if (player.supemons[i] == NULL)
@@ -142,7 +141,7 @@ int menu_change_supemon()
         }
         printf("%d - %s   hp: %d / %d \n", i + 1, player.supemons[i]->name, player.supemons[i]->hp, player.supemons[i]->max_hp);
     }
-
+    printf("Choose a Supemon to Swap with : \n");
     scanf("%d", &choice);
 
     while (choice < 1 || choice > 6)
@@ -159,8 +158,13 @@ int menu_change_supemon()
     }
     else
     {
-        // a modifier pour que il go dans temp supemon pour que un des deux supemon ne soit pas delete
-        copy_supemon(player.current_supemon, player.supemons[choice - 1]);
+        // Stockez temporairement le Supemon actuel
+        struct supemon *temp_supemon = player.current_supemon;
+        // Copiez le Supemon choisi dans le Supemon actuel
+        copy_supemon(player.supemons[choice - 1], player.current_supemon);
+        // Mettez le Supemon temporaire dans la position choisie
+        player.supemons[choice - 1] = temp_supemon;
+
 
         printf("You change your Supemon for %s\n", player.current_supemon->name);
     }

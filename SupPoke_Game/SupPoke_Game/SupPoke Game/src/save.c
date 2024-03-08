@@ -4,51 +4,73 @@
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
+#include <stdbool.h>
 
-#include "save.h"
-#include "struct.h"
+#include "../include/struct.h"
+#include "../include/save.h"
 
-
-/*
-void save_game(struct player *player)
-{
-    FILE *file = fopen("save.txt", "w");
-    if(file != NULL)
-    {
-        fprintf(file,"%s\n", player.name);
-        fprintf(file,"%s\n", player.current_supemon);
-        fprintf(file,"%s\n", player.money);
-        fprintf(file,"%s\n", player.potions);
-        fprintf(file,"%s\n", player.rare_candy);
-        fprintf(file,"%s\n", player.supemons);
-        fprintf(file,"%s\n", player.super_potions);
-        fclose(file);
+// Fonction pour sauvegarder les informations du joueur dans un fichier
+void save_player(struct player *p) {
+    FILE *file = fopen("save_player.txt", "w"); // Ouvrir le fichier en mode écriture
+    if (file == NULL) {
+        printf("Erreur : Impossible d'ouvrir le fichier de sauvegarde pour le joueur.\n");
+        return;
     }
-    else
-    {
-        printf("impossible to open the current save file.\n");
-    }
+    // Écrire les informations du joueur dans le fichier
+    fprintf(file, "%s %d %d %d %d %d\n", p->name, p->money, p->potions, p->super_potions, p->rare_candy);
+    fclose(file); // Fermer le fichier
 }
-*/
-/*
-struct player_load_game()
-{
-    FILE *file = fopen("save.txt", "r");
-    if (file != NULL)
-    {
-        fscanf(file, "%s\n", player.name)
-        fscanf(file,"%s\n", player.current_supemon);
-        fscanf(file,"%s\n", player.money);
-        fscanf(file,"%s\n", player.potions);
-        fscanf(file,"%s\n", player.rare_candy);
-        fscanf(file,"%s\n", player.supemons);
-        fscanf(file,"%s\n", player.super_potions);
-        fclose(file);
+
+// Fonction pour charger les informations du joueur depuis un fichier
+void load_player(struct player *p) {
+    FILE *file = fopen("save_player.txt", "r"); // Ouvrir le fichier en mode lecture
+    if (file == NULL) {
+        printf("Erreur : Impossible d'ouvrir le fichier de sauvegarde pour le joueur.\n");
+        return;
     }
-    else
-    {
-        printf("impossible to open the current save file")
-    }
-    return player
+    // Lire les informations du joueur depuis le fichier
+    fscanf(file, "%s %d %d %d %d %d\n", p->name, &p->money, &p->potions, &p->super_potions, &p->rare_candy);
+    fclose(file); // Fermer le fichier
 }
-*/
+
+// Fonction pour sauvegarder les informations d'un Supemon dans un fichier
+void save_supemon(struct supemon *s) {
+    FILE *file = fopen("save_supemon.txt", "w"); // Ouvrir le fichier en mode écriture
+    if (file == NULL) {
+        printf("Erreur : Impossible d'ouvrir le fichier de sauvegarde pour le Supemon.\n");
+        return;
+    }
+    // Écrire les informations du Supemon dans le fichier
+    fprintf(file, "%s %d %d %d %d %d %d %d %d %d %d %d %d %d %d\n", s->name, s->hp, s->max_hp, s->attack, s->base_attack,
+            s->defense, s->base_defense, s->speed, s->base_speed, s->accuracy, s->base_accuracy, s->level, s->xp,
+            s->xp_to_next_level, s->evasion, s->base_evasion);
+    fclose(file); // Fermer le fichier
+}
+
+// Fonction pour charger les informations d'un Supemon depuis un fichier
+void load_supemon(struct supemon *s) {
+    FILE *file = fopen("save_supemon.txt", "r"); // Ouvrir le fichier en mode lecture
+    if (file == NULL) {
+        printf("Erreur : Impossible d'ouvrir le fichier de sauvegarde pour le Supemon.\n");
+        return;
+    }
+    // Lire les informations du Supemon depuis le fichier
+    fscanf(file, "%s %d %d %d %d %d %d %d %d %d %d %d %d %d %d\n", s->name, &s->hp, &s->max_hp, &s->attack, &s->base_attack,
+           &s->defense, &s->base_defense, &s->speed, &s->base_speed, &s->accuracy, &s->base_accuracy, &s->level, &s->xp,
+           &s->xp_to_next_level, &s->evasion, &s->base_evasion);
+    fclose(file); // Fermer le fichier
+}
+
+bool check_save_files_exist() {
+    FILE *player_file = fopen("save_player.txt", "r");
+    FILE *supemon_file = fopen("save_supemon.txt", "r");
+
+    if (player_file != NULL && supemon_file != NULL) {
+        fclose(player_file);
+        fclose(supemon_file);
+        return true;
+    }
+
+    return false;
+}
+

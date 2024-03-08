@@ -3,6 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
+#include <stdbool.h>
 
 // Include library headers
 #include "include/struct.h"
@@ -13,6 +14,7 @@
 #include "include/fight.h"
 #include "include/save.h"
 #include "include/dommage.h"
+
 
 struct player player;
 
@@ -145,9 +147,21 @@ int main() {
          TEST DE FONCTIONNALITE      */
 
     // Lancement du jeu
-    menu_start();
-    menu_firstsupemon();
-    
+
+    // Fonction qui vérifie si les fichiers de sauvegarde existent
+    bool save_exists = check_save_files_exist();
+
+
+    if (save_exists) {
+        load_player(&player);
+        for (int i = 0; i < MAX_SUPEMON; i++) {
+            load_supemon(player.supemons[i]);
+        }
+    } else {
+        menu_start();
+        menu_firstsupemon();
+    }
+
     //Ingame Loop
     while (1)
     {
@@ -155,6 +169,12 @@ int main() {
         {
             break;
         }
+    }
+
+    // Sauvegarde des informations dans les fichiers avant de quitter
+    save_player(&player);
+    for (int j = 0; j < MAX_SUPEMON; j++) {
+        save_supemon(player.supemons[j]);
     }
 
     //libération de mémoire

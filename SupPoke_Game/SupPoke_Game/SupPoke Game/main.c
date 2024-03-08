@@ -126,7 +126,7 @@ int main() {
     printf("%d\n", player.supemons[0]->evasion);
     */
 
-
+    /*
     player.current_supemon = &SupIrtle;
     player.supemons[0] = &SupIrtle;
     player.supemons[1] = &SupMander;
@@ -142,17 +142,20 @@ int main() {
     printf("le supemon en position 0 est : %s\n", player.supemons[0]->name);
     menu_change_supemon();
     printf("le supemon en position 0 est : %s\n", player.supemons[0]->name);
-
+    */
 
     // Lancement du jeu
     menu_start();
     menu_firstsupemon();
 
     //Ingame Loop
-    // while (1)
-    // {
-    //     menu_menu();
-    // }
+    while (1)
+    {
+        if (menu_menu() == 0)
+        {
+            break;
+        }
+    }
 
     //libération de mémoire
     free(player.current_supemon);

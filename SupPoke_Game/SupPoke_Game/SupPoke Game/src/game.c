@@ -50,15 +50,15 @@ int menu_firstsupemon()
     {
         case 1:
             copy_supemon(&SupMander, player.current_supemon);
-            copy_supemon(player.current_supemon, player.supemons[0]);
+            //copy_supemon(player.current_supemon, player.supemons[0]);
             break;
         case 2:
             copy_supemon(&SupAsaur, player.current_supemon);
-            copy_supemon(player.current_supemon, player.supemons[0]);
+            //copy_supemon(player.current_supemon, player.supemons[0]);
             break;
         case 3:
             copy_supemon(&SupIrtle, player.current_supemon);
-            copy_supemon(player.current_supemon, player.supemons[0]);
+            //copy_supemon(player.current_supemon, player.supemons[0]);
             break;
         default:
             break;
@@ -108,14 +108,14 @@ int menu_menu()
         //save(); // a faire
         break;
     case 6:
-        exit(0);
+        return 0;
     
     default:
         break;
     }
 
 
-    return 0;
+    return 1;
 }
 
 int menu_bag()

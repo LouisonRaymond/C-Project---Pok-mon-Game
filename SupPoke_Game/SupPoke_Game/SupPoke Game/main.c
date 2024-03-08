@@ -117,7 +117,7 @@ int main() {
             return 1;
         }
     }
-    /*
+    /*  TEST DE FONCTIONNALITE
     copy_supemon(&SupIrtle, player.current_supemon);
     printf("%d\n", player.current_supemon->evasion);
 
@@ -142,7 +142,7 @@ int main() {
     printf("le supemon en position 0 est : %s\n", player.supemons[0]->name);
     menu_change_supemon();
     printf("le supemon en position 0 est : %s\n", player.supemons[0]->name);
-    */
+         TEST DE FONCTIONNALITE      */
 
     // Lancement du jeu
     menu_start();

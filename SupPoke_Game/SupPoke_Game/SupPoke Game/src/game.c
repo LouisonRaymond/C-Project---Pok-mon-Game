@@ -78,7 +78,7 @@ int menu_menu()
     printf("|    2 - shop                  |\n");
     printf("|    3 - Supemon Center        |\n");
     printf("|    4 - Change Supemon        |\n");
-    printf("|    5 - Save                  |\n");
+    printf("|    5 - Bag                   |\n");
     printf("|    6 - Exit                  |\n");
     printf("+------------------------------+\n\n");
 
@@ -105,7 +105,7 @@ int menu_menu()
         menu_change_supemon();
         break;
     case 5:
-        //save(); // a faire
+        menu_bag();
         break;
     case 6:
         return 0;

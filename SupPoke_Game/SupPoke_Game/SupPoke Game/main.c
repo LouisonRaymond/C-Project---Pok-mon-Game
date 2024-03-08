@@ -147,7 +147,7 @@ int main() {
     // Lancement du jeu
     menu_start();
     menu_firstsupemon();
-
+    
     //Ingame Loop
     while (1)
     {

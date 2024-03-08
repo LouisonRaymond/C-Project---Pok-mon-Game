@@ -78,6 +78,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/include/dommage.h">
+			<Option target="SupPoke_Game"/>
+		</Unit>
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/include/fight.h">
 			<Option target="SupPoke_Game"/>
 		</Unit>
@@ -100,6 +103,9 @@
 			<Option target="SupPoke_Game"/>
 		</Unit>
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/main.c">
+			<Option target="SupPoke_Game"/>
+		</Unit>
+		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/dommage.c">
 			<Option target="SupPoke_Game"/>
 		</Unit>
 		<Unit filename="C:/Users/Peon4/OneDrive/Documents/GitHub/C-Project---Pok-mon-Game/SupPoke_Game/SupPoke_Game/SupPoke Game/src/fight.c">

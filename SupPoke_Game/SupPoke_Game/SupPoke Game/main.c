@@ -12,10 +12,17 @@
 #include "include/supcenter.h"
 #include "include/fight.h"
 #include "include/save.h"
+#include "include/dommage.h"
 
 struct player player;
 
 struct wild_supemon wild_supemon;
+
+struct move foliage = {"Foliage", 0, 0, 1, 0}; // Foliage gives 1 Evasion
+struct move scratch = {"Scratch", 3, 0, 0, 0}; // Scratch deals 3 damage
+struct move grawl = {"Grawl", 0, 0, 0, 1}; // Grawl gives 1 Attack
+struct move pound = {"Pound", 2, 0}; // Pound deals 2 damage
+struct move shell = {"Shell", 0, 1}; // Shell gives 1 Defense
 
 struct supemon SupMander =
         {
@@ -35,6 +42,7 @@ struct supemon SupMander =
                 500,         // xp_to_next_level
                 1,          //evasion
                 1,      //base_evasion
+                {&scratch, &grawl} // moves
         };
 
 struct supemon SupAsaur =
@@ -54,7 +62,9 @@ struct supemon SupAsaur =
                 0,          // xp
                 500,          // xp_to_next_level
                 3,        // evasion
-                3   // base_evasion
+                3,   // base_evasion
+                {&foliage, &pound} // moves
+
         };
 
 struct supemon SupIrtle =
@@ -75,8 +85,11 @@ struct supemon SupIrtle =
                 500,          // xp_to_next_level
                 2,          //evasion
                 2,      //base_evasion
-
+                {&pound, &shell} // moves
         };
+
+
+
 
 int main() {
 
@@ -110,14 +123,23 @@ int main() {
     printf("le supemon en position 1 a : evasion");
     printf("%d\n", player.supemons[0]->evasion);
     */
+
+
     player.current_supemon = &SupIrtle;
     player.supemons[0] = &SupIrtle;
     player.supemons[1] = &SupMander;
     player.supemons[2] = &SupAsaur;
+    initialize_wild_supemon(&player, &wild_supemon);
+
+    printf("%d base hp\n", wild_supemon.hp);
+    execute_move(&scratch, player.current_supemon, &wild_supemon);
+    printf("%d hp after move\n", wild_supemon.hp);
+
+    printf("%s\n", player.current_supemon->moves[0]->name);
+
     printf("le supemon en position 0 est : %s\n", player.supemons[0]->name);
     menu_change_supemon();
     printf("le supemon en position 0 est : %s\n", player.supemons[0]->name);
-
 
 
     // Lancement du jeu

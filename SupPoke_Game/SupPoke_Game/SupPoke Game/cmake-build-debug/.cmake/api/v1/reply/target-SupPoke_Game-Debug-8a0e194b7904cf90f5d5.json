@@ -72,7 +72,8 @@
 				8,
 				9,
 				11,
-				12
+				12,
+				14
 			]
 		}
 	],
@@ -115,7 +116,8 @@
 				3,
 				4,
 				10,
-				13
+				13,
+				15
 			]
 		},
 		{
@@ -128,7 +130,8 @@
 				8,
 				9,
 				11,
-				12
+				12,
+				14
 			]
 		}
 	],
@@ -209,6 +212,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "include/save.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/dommage.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/dommage.h",
 			"sourceGroupIndex" : 0
 		}
 	],

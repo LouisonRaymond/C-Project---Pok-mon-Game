@@ -152,6 +152,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/main.c.s
 .PHONY : main.c.s
 
+src/dommage.obj: src/dommage.c.obj
+.PHONY : src/dommage.obj
+
+# target to build an object file
+src/dommage.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/dommage.c.obj
+.PHONY : src/dommage.c.obj
+
+src/dommage.i: src/dommage.c.i
+.PHONY : src/dommage.i
+
+# target to preprocess a source file
+src/dommage.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/dommage.c.i
+.PHONY : src/dommage.c.i
+
+src/dommage.s: src/dommage.c.s
+.PHONY : src/dommage.s
+
+# target to generate assembly for a file
+src/dommage.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SupPoke_Game.dir\build.make CMakeFiles/SupPoke_Game.dir/src/dommage.c.s
+.PHONY : src/dommage.c.s
+
 src/fight.obj: src/fight.c.obj
 .PHONY : src/fight.obj
 
@@ -308,6 +332,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/dommage.obj
+	@echo ... src/dommage.i
+	@echo ... src/dommage.s
 	@echo ... src/fight.obj
 	@echo ... src/fight.i
 	@echo ... src/fight.s

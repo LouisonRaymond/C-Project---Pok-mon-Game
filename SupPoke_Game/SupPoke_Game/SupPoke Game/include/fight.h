@@ -7,5 +7,6 @@ int menu_fight_player_turn();
 int menu_catch();
 int menu_run();
 int menu_change_supemon();
+int menu_turn_by_turn_fight();
 
 #endif // FIGHT_H

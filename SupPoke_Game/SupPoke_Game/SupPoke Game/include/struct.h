@@ -35,6 +35,7 @@ extern struct supemon
     int xp_to_next_level;
     int evasion;
     int base_evasion;
+    struct move *moves[2]; // Pointeur vers un mouvement
 } SupMander, SupAsaur, SupIrtle;
 
 extern struct wild_supemon
@@ -56,6 +57,14 @@ extern struct wild_supemon
     int evasion;
     int base_evasion;
 } wild_supemon;
+
+extern struct move {
+    char name[20];
+    int damage;
+    int defense_boost;
+    int evasion_boost;
+    int attack_boost;
+} foliage, scratch, grawl, pound, shell;
 
 
 #endif // STRUCT_H

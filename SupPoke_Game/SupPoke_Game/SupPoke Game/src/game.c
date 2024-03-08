@@ -77,22 +77,23 @@ int menu_menu()
     printf("|    1 - Go into the wild      |\n");
     printf("|    2 - shop                  |\n");
     printf("|    3 - Supemon Center        |\n");
-    printf("|    4 - Save                  |\n");
-    printf("|    5 - Exit                  |\n");
+    printf("|    4 - Change Supemon        |\n");
+    printf("|    5 - Save                  |\n");
+    printf("|    6 - Exit                  |\n");
     printf("+------------------------------+\n\n");
 
-    printf("Your choice (1, 2, 3 or 4) : ");
+    printf("Your choice (1, 2, 3, 4, 5 or 6) : ");
     scanf("%d", &choice);
     while (choice < 1 || choice > 5)
     {
         printf("Invalid choice\n");
-        printf("Your choice (1, 2, 3, 4 or 5) : ");
+        printf("Your choice (1, 2, 3, 4, 5 or 6) : ");
         scanf("%d", &choice);
     }
     switch (choice)
     {
     case 1:
-        menu_fight();
+        menu_turn_by_turn_fight();
         break;
     case 2:
         menu_shop();
@@ -101,9 +102,12 @@ int menu_menu()
         menu_supemon_center();
         break;
     case 4:
-        //save(); // a faire
+        menu_change_supemon();
         break;
     case 5:
+        //save(); // a faire
+        break;
+    case 6:
         exit(0);
     
     default:

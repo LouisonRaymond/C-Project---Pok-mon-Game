@@ -138,8 +138,9 @@ int menu_change_supemon()
         {
             printf("%d - Empty\n", i + 1);
             continue;
+        } else {
+            printf("%d - %s   hp: %d / %d \n", i + 1, player.supemons[i]->name, player.supemons[i]->hp, player.supemons[i]->max_hp);
         }
-        printf("%d - %s   hp: %d / %d \n", i + 1, player.supemons[i]->name, player.supemons[i]->hp, player.supemons[i]->max_hp);
     }
     printf("Choose a Supemon to Swap with : \n");
     scanf("%d", &choice);
@@ -173,3 +174,41 @@ int menu_change_supemon()
     return 0;
 }
 
+int menu_turn_by_turn_fight()
+{
+    int choice = 0;
+
+    while (player.current_supemon->hp > 0 && wild_supemon.hp > 0 && player.supemons[0]->hp != 0 && player.supemons[1]->hp != 0 && player.supemons[2]->hp != 0 && player.supemons[3]->hp != 0 && player.supemons[4]->hp != 0 && player.supemons[5]->hp != 0)
+    {
+        menu_fight_player_turn();
+        menu_fight();
+
+        switch (choice)
+        {
+            case 1:
+                // gerer les attacks ici
+                break;
+            case 2:
+                menu_change_supemon();
+                break;
+            case 3:
+                menu_run();
+                break;
+            default:
+                break;
+        }
+
+        if (wild_supemon.hp <= 0)
+        {
+            printf("You win the fight\n");
+            return 0;
+        }
+        // mettre un if qui fait attacker le wild supemon si il est pas mort
+        if (player.current_supemon->hp <= 0)
+        {
+            printf("You lose the fight\n");
+            return 0;
+        }
+    }
+    return 1;
+}

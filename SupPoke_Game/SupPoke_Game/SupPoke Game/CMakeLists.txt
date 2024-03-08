@@ -20,4 +20,6 @@ add_executable(SupPoke_Game
         src/supinit.c
         src/save.c
         include/save.h
+        src/dommage.c
+        include/dommage.h
 )

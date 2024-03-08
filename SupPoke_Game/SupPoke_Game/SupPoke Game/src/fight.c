@@ -10,6 +10,7 @@
 #include "../include/fight.h"
 #include "../include/supinit.h"
 #include "../include/game.h"
+#include "../include/dommage.h"
 
 int menu_fight()
 {
@@ -34,26 +35,6 @@ int menu_fight()
         scanf("%d", &choice);
     }
 
-    switch (choice) {
-        case 1:
-            printf("You choose to fight\n");
-            break;
-        case 2:
-            menu_bag();
-            break;
-        case 3:
-            menu_chose_supemon();
-            break;
-        case 4:
-            menu_catch();
-            break;
-        case 5:
-            menu_run();
-            break;
-        default:
-            break;
-    }
-
     return choice;
 }
 
@@ -65,10 +46,12 @@ int menu_run()
 
     if (random_value <= success_rate) {
         printf("You successfully escaped from the battle!\n");
+        return 0;
     } else {
         printf("You failed to escape and must continue the battle!\n");
+
     }
-    return 0;
+    return 1;
 }
 
 int menu_catch()
@@ -100,6 +83,7 @@ int menu_catch()
     {
         printf("You caught the wild %s\n", wild_supemon.name);
         copy_supemon((struct supemon *) &wild_supemon, player.supemons[team_position]);
+        return 2;
 
     }
     else
@@ -176,24 +160,67 @@ int menu_change_supemon()
 
 int menu_turn_by_turn_fight()
 {
+    int player_starts = (player.current_supemon->speed > wild_supemon.speed) ? 1 : ((player.current_supemon->speed < wild_supemon.speed) ? 0 : rand() % 2);
     int choice = 0;
+    initialize_wild_supemon(&player, &wild_supemon);
 
     while (player.current_supemon->hp > 0 && wild_supemon.hp > 0 && player.supemons[0]->hp != 0 && player.supemons[1]->hp != 0 && player.supemons[2]->hp != 0 && player.supemons[3]->hp != 0 && player.supemons[4]->hp != 0 && player.supemons[5]->hp != 0)
     {
-        menu_fight_player_turn();
-        menu_fight();
+        if (player.current_supemon->hp <= 0)
+        {
+            printf("Your Supemon is dead\n");
+            menu_change_supemon();
+        }
+
+        if (player_starts) {
+            // Tour du joueur
+            choice = menu_fight();
+            menu_fight_player_turn();
+        } else {
+            // Tour du Supémon adverse
+            // Choisissez un mouvement aléatoire pour le Supémon adverse
+            int random_move_index = rand() % 2;
+            execute_move((struct move *) &wild_supemon.moves[random_move_index], &wild_supemon, player.current_supemon);
+            printf("The wild %s used %s\n", wild_supemon.name, wild_supemon.moves[random_move_index]->name);
+        }
 
         switch (choice)
         {
             case 1:
-                // gerer les attacks ici
+                printf("+------------------------------+\n");
+                printf("|  1 - %s                      |", player.current_supemon->moves[0]->name);
+                printf("|  2 - %s                      | ", player.current_supemon->moves[1]->name);
+                printf("+------------------------------+\n");
+                printf("Your choice (1 or 2) : ");
+                scanf("%d", &choice);
+                //execute la competence choisie par le joueur
+                if (choice == 1)
+                {
+                    execute_move(player.current_supemon->moves[0], player.current_supemon,&wild_supemon);
+                }
+                else
+                {
+                    execute_move(player.current_supemon->moves[1], player.current_supemon, &wild_supemon);
+                }
+
                 break;
             case 2:
-                menu_change_supemon();
+                menu_bag();
                 break;
             case 3:
-                menu_run();
+                menu_change_supemon();
                 break;
+            case 4:
+                if (menu_catch() == 2) // Tentative de capture
+                {
+                    return 0; // Quitter le combat si le Supémon est capturé avec succès
+                }
+                break;
+            case 5:
+                if (menu_run() == 0)
+                {
+                    return 0;
+                }
             default:
                 break;
         }
@@ -201,6 +228,22 @@ int menu_turn_by_turn_fight()
         if (wild_supemon.hp <= 0)
         {
             printf("You win the fight\n");
+            int reward_coins = rand() % 401 + 100; // Entre 100 et 500 Supcoins
+            int reward_exp = (rand() % 401 + 100) * wild_supemon.level; // Entre 100 et 500 fois le niveau du Supémon sauvage
+            printf("You earned %d Supcoins and %d experience points!\n", reward_coins, reward_exp);
+
+            // Mettre à jour les récompenses du joueur
+            player.money += reward_coins;
+            player.current_supemon->xp += reward_exp;
+
+            // Mettre à jour le niveau du Supémon actuel si nécessaire
+            if (player.current_supemon->xp >= player.current_supemon->xp_to_next_level) {
+                player.current_supemon->level++;
+                player.current_supemon->xp -= player.current_supemon->xp_to_next_level;
+                player.current_supemon->xp_to_next_level = player.current_supemon->xp_to_next_level + 500;
+                printf("%s is now level %d!\n", player.current_supemon->name, player.current_supemon->level);
+            }
+
             return 0;
         }
         // mettre un if qui fait attacker le wild supemon si il est pas mort
@@ -209,6 +252,10 @@ int menu_turn_by_turn_fight()
             printf("You lose the fight\n");
             return 0;
         }
+
+        // Alternez les tours
+        player_starts = !player_starts;
+
     }
     return 1;
 }

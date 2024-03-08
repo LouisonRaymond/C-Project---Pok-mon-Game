@@ -18,6 +18,8 @@ struct player player;
 
 struct wild_supemon wild_supemon;
 
+
+
 struct move foliage = {"Foliage", 0, 0, 1, 0}; // Foliage gives 1 Evasion
 struct move scratch = {"Scratch", 3, 0, 0, 0}; // Scratch deals 3 damage
 struct move grawl = {"Grawl", 0, 0, 0, 1}; // Grawl gives 1 Attack

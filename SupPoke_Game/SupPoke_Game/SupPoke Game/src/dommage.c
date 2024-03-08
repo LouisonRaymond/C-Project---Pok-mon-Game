@@ -44,7 +44,13 @@ void execute_move(struct move *move, struct supemon *launcher, struct supemon *t
         if ((float)rand() / RAND_MAX < rate) {
             // Le mouvement a réussi
             printf("%s a réussi !\n", move->name);
-            printf("Degats infliges : %d\n", damage);
+            if (strcmp(launcher->name, wild_supemon.name) == 0)
+            {
+                printf("Degats recus : %d\n", damage);
+            } else {
+                printf("Degats infliges : %d\n", damage);
+            }
+
             // Appliquer les dégâts à la cible
             target->hp -= damage;
             if (target->hp < 0) {
@@ -58,7 +64,7 @@ void execute_move(struct move *move, struct supemon *launcher, struct supemon *t
         // Mouvement non-offensif
         // Gérer l'effet du mouvement ici (par exemple, augmentation/diminution des statistiques)
         // Mouvement non-offensif
-        printf("Le mouvement %s n'est pas un mouvement offensif.\n", move->name);
+        //printf("Le mouvement %s n'est pas un mouvement offensif.\n", move->name);
         if (move->defense_boost != 0) {
             // Augmentation ou diminution de la défense
             launcher->defense += move->defense_boost;
@@ -74,7 +80,7 @@ void execute_move(struct move *move, struct supemon *launcher, struct supemon *t
             launcher->attack += move->attack_boost;
             printf("L'attaque de %s a été modifiée de %d.\n", launcher->name, move->attack_boost);
         }
-        printf("Le mouvement %s n'est pas un mouvement offensif.\n", move->name);
+        //printf("Le mouvement %s n'est pas un mouvement offensif.\n", move->name);
     }
 }
 

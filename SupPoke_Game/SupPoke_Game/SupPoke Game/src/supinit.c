@@ -39,6 +39,18 @@ void initialize_wild_supemon(struct player *player, struct wild_supemon *wild_su
     int random_index = rand() % 3; // Générer un nombre aléatoire entre 0 et 2
     strcpy(wild_supemon->name, wild_names[random_index]);
 
+    // Assigner les mouvements en fonction du nom du Supémon sauvage
+    if (strcmp(wild_supemon->name, "SupIrtle") == 0) {
+        wild_supemon->moves[0] = &foliage; // Premier mouvement
+        wild_supemon->moves[1] = &pound;   // Deuxième mouvement
+    } else if (strcmp(wild_supemon->name, "SupMander") == 0) {
+        wild_supemon->moves[0] = &scratch; // Premier mouvement
+        wild_supemon->moves[1] = &grawl;   // Deuxième mouvement
+    } else if (strcmp(wild_supemon->name, "SupAsaur") == 0) {
+        wild_supemon->moves[0] = &scratch; // Premier mouvement
+        wild_supemon->moves[1] = &pound;   // Deuxième mouvement
+    }
+
     // Calculer les nouvelles statistiques en réduisant légèrement celles du Pokémon actuel
     wild_supemon->hp = (int)(current_supemon->hp * 0.9); // Réduire la santé de 10%
     wild_supemon->max_hp = (int)(current_supemon->max_hp * 0.9);

@@ -1,6 +1,8 @@
 #ifndef SUPPOKE_GAME_SAVE_H
 #define SUPPOKE_GAME_SAVE_H
 
+#include <stdbool.h>
+
 void save_player(struct player *p);
 void save_supemon(struct supemon *s);
 void load_player(struct player *p);

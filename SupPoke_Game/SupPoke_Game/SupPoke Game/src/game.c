@@ -84,7 +84,7 @@ int menu_menu()
 
     printf("Your choice (1, 2, 3, 4, 5 or 6) : ");
     scanf("%d", &choice);
-    while (choice < 1 || choice > 5)
+    while (choice < 1 || choice > 6)
     {
         printf("Invalid choice\n");
         printf("Your choice (1, 2, 3, 4, 5 or 6) : ");

@@ -31,8 +31,8 @@ int calculate_damage(struct move *move, struct supemon *launcher, struct supemon
 }
 
 // Fonction pour calculer le taux de succès du mouvement
-float success_rate(struct move *move, struct supemon *launcher, struct supemon *target) {
-    return (float)launcher->accuracy / (launcher->accuracy + target->evasion) + 0.1;
+int success_rate(struct move *move, struct supemon *launcher, struct supemon *target) {
+    return (int)launcher->accuracy / ((int)launcher->accuracy + target->evasion);
 }
 
 // Fonction pour exécuter un mouvement
@@ -40,10 +40,11 @@ void execute_move(struct move *move, struct supemon *launcher, struct supemon *t
     if (is_offensive(move)) {
         // Mouvement offensif
         int damage = calculate_damage(move, launcher, target);
-        float rate = success_rate(move, launcher, target);
-        if ((float)rand() / RAND_MAX < rate) {
+        int rate = success_rate(move, launcher, target);
+        if ((int)rand() / RAND_MAX < rate) {
             // Le mouvement a réussi
-            printf("%s a réussi !\n", move->name);
+            printf("l'attaque a réussi !\n");
+            //printf("Le mouvement %s est un mouvement offensif.\n", move->name);
             if (strcmp(launcher->name, wild_supemon.name) == 0)
             {
                 printf("Degats recus : %d\n", damage);
@@ -58,7 +59,8 @@ void execute_move(struct move *move, struct supemon *launcher, struct supemon *t
             }
         } else {
             // Le mouvement a échoué
-            printf("%s a échoué !\n", move->name);
+            printf("l'attaque a échoué !\n");
+
         }
     } else {
         // Mouvement non-offensif

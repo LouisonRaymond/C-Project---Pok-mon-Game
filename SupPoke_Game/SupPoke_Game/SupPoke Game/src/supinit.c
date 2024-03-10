@@ -30,6 +30,10 @@ void copy_supemon(struct supemon *source, struct supemon *destination){
     destination->xp_to_next_level = source->xp_to_next_level;
     destination->evasion = source->evasion;
     destination->base_evasion = source->base_evasion;
+
+    for (int i = 0; i < 2; i++) {
+        destination->moves[i] = source->moves[i];
+    }
 }
 
 void initialize_wild_supemon(struct player *player, struct wild_supemon *wild_supemon) {
@@ -53,19 +57,43 @@ void initialize_wild_supemon(struct player *player, struct wild_supemon *wild_su
 
     // Calculer les nouvelles statistiques en réduisant légèrement celles du Pokémon actuel
     wild_supemon->hp = (int)(current_supemon->hp * 0.9); // Réduire la santé de 10%
+    wild_supemon->hp = (wild_supemon->hp < 1) ? 1 : wild_supemon->hp; // Vérifier si la santé est inférieure à 1
+
     wild_supemon->max_hp = (int)(current_supemon->max_hp * 0.9);
+    wild_supemon->max_hp = (wild_supemon->max_hp < 1) ? 1 : wild_supemon->max_hp;
+
     wild_supemon->attack = (int)(current_supemon->attack * 0.9);
+    wild_supemon->attack = (wild_supemon->attack < 1) ? 1 : wild_supemon->attack;
+
     wild_supemon->base_attack = (int)(current_supemon->base_attack * 0.9);
+    wild_supemon->base_attack = (wild_supemon->base_attack < 1) ? 1 : wild_supemon->base_attack;
+
     wild_supemon->defense = (int)(current_supemon->defense * 0.9);
+    wild_supemon->defense = (wild_supemon->defense < 1) ? 1 : wild_supemon->defense;
+
     wild_supemon->base_defense = (int)(current_supemon->base_defense * 0.9);
+    wild_supemon->base_defense = (wild_supemon->base_defense < 1) ? 1 : wild_supemon->base_defense;
+
     wild_supemon->speed = (int)(current_supemon->speed * 0.9);
+    wild_supemon->speed = (wild_supemon->speed < 1) ? 1 : wild_supemon->speed;
+
     wild_supemon->base_speed = (int)(current_supemon->base_speed * 0.9);
-    wild_supemon->accuracy = (int)(current_supemon->accuracy * 0.9);
-    wild_supemon->base_accuracy = (int)(current_supemon->base_accuracy * 0.9);
+    wild_supemon->base_speed = (wild_supemon->base_speed < 1) ? 1 : wild_supemon->base_speed;
+
+    wild_supemon->accuracy = (int)(current_supemon->accuracy);
+    wild_supemon->accuracy = (wild_supemon->accuracy < 1) ? 1 : wild_supemon->accuracy;
+
+    wild_supemon->base_accuracy = (int)(current_supemon->base_accuracy);
+    wild_supemon->base_accuracy = (wild_supemon->base_accuracy < 1) ? 1 : wild_supemon->base_accuracy;
+
     wild_supemon->level = current_supemon->level;
+
     wild_supemon->xp = (int)(current_supemon->xp);
+
     wild_supemon->xp_to_next_level = (int)(current_supemon->xp_to_next_level);
+
     wild_supemon->evasion = (int)(current_supemon->evasion * 0.9); // Réduire l'esquive de 10%
+    wild_supemon->evasion = (wild_supemon->evasion < 1) ? 1 : wild_supemon->evasion; // Vérifier si l'esquive est inférieure à 1
+
     wild_supemon->base_evasion = (int)(current_supemon->base_evasion * 0.9);
-    // Ajustez les statistiques comme nécessaire
-}
+    wild_supemon->base_evasion = (wild_supemon->base_evasion < 1) ? 1 : wild_supemon->base_evasion;

@@ -175,56 +175,59 @@ int menu_turn_by_turn_fight()
         if (player_starts) {
             // Tour du joueur
             choice = menu_fight();
-            menu_fight_player_turn();
         } else {
             // Tour du Supémon adverse
             // Choisissez un mouvement aléatoire pour le Supémon adverse
             int random_move_index = rand() % 2;
-            execute_move((struct move *) &wild_supemon.moves[random_move_index], &wild_supemon, player.current_supemon);
+            execute_move((struct move *) &wild_supemon.moves[random_move_index], (struct supemon *) &wild_supemon, player.current_supemon);
             printf("The wild %s used %s\n", wild_supemon.name, wild_supemon.moves[random_move_index]->name);
         }
 
-        switch (choice)
+        if (player_starts != 0)
         {
-            case 1:
-                printf("+------------------------------+\n");
-                printf("|  1 - %s                      |", player.current_supemon->moves[0]->name);
-                printf("|  2 - %s                      | ", player.current_supemon->moves[1]->name);
-                printf("+------------------------------+\n");
-                printf("Your choice (1 or 2) : ");
-                scanf("%d", &choice);
-                //execute la competence choisie par le joueur
-                if (choice == 1)
-                {
-                    execute_move(player.current_supemon->moves[0], player.current_supemon,&wild_supemon);
-                }
-                else
-                {
-                    execute_move(player.current_supemon->moves[1], player.current_supemon, &wild_supemon);
-                }
+            switch (choice)
+            {
+                case 1:
+                    menu_fight_player_turn();
+                    printf("+------------------------------+\n");
+                    printf("|  1 - %s                      |\n", player.current_supemon->moves[0]->name);
+                    printf("|  2 - %s                      |\n", player.current_supemon->moves[1]->name);
+                    printf("+------------------------------+\n");
+                    printf("Your choice (1 or 2) : ");
+                    scanf("%d", &choice);
+                    //execute la competence choisie par le joueur
+                    // crash ici
+                    if (choice == 1)
+                    {
+                        execute_move(player.current_supemon->moves[0], player.current_supemon,(struct supemon *) &wild_supemon);
+                    }
+                    else
+                    {
+                        execute_move(player.current_supemon->moves[1], player.current_supemon,(struct supemon *) &wild_supemon);
+                    }
 
-                break;
-            case 2:
-                menu_bag();
-                break;
-            case 3:
-                menu_change_supemon();
-                break;
-            case 4:
-                if (menu_catch() == 2) // Tentative de capture
-                {
-                    return 0; // Quitter le combat si le Supémon est capturé avec succès
-                }
-                break;
-            case 5:
-                if (menu_run() == 0)
-                {
-                    return 0;
-                }
-            default:
-                break;
+                    break;
+                case 2:
+                    menu_bag();
+                    break;
+                case 3:
+                    menu_change_supemon();
+                    break;
+                case 4:
+                    if (menu_catch() == 2) // Tentative de capture
+                    {
+                        return 0; // Quitter le combat si le Supémon est capturé avec succès
+                    }
+                    break;
+                case 5:
+                    if (menu_run() == 0)
+                    {
+                        return 0;
+                    }
+                default:
+                    break;
+            }
         }
-
         if (wild_supemon.hp <= 0)
         {
             printf("You win the fight\n");

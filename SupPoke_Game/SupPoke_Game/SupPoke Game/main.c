@@ -20,8 +20,6 @@ struct player player;
 
 struct wild_supemon wild_supemon;
 
-
-
 struct move foliage = {"Foliage", 0, 0, 1, 0}; // Foliage gives 1 Evasion
 struct move scratch = {"Scratch", 3, 0, 0, 0}; // Scratch deals 3 damage
 struct move grawl = {"Grawl", 0, 0, 0, 1}; // Grawl gives 1 Attack
@@ -97,6 +95,9 @@ struct supemon SupIrtle =
 
 int main() {
 
+    // Initialisation de la graine pour la génération de nombres aléatoires
+    srand(time(NULL));
+
     //alloue la mémoire pour stocker un supémon dans current supemon
     player.current_supemon = (struct supemon*)malloc(sizeof(struct supemon));
     if (player.current_supemon == NULL) {
@@ -138,9 +139,10 @@ int main() {
     printf("%d base hp\n", wild_supemon.hp);
     execute_move(&scratch, player.current_supemon, &wild_supemon);
     printf("%d hp after move\n", wild_supemon.hp);
+*/
 
-    printf("%s\n", player.current_supemon->moves[0]->name);
-
+    //printf("%s\n", player.current_supemon->moves[0]->name);
+/*
     printf("le supemon en position 0 est : %s\n", player.supemons[0]->name);
     menu_change_supemon();
     printf("le supemon en position 0 est : %s\n", player.supemons[0]->name);
@@ -171,6 +173,7 @@ int main() {
         }
     }
 
+    printf("partie Sauvegarder\n");
     // Sauvegarde des informations dans les fichiers avant de quitter
     save_player(&player);
     for (int j = 0; j < MAX_SUPEMON; j++) {
@@ -183,6 +186,8 @@ int main() {
     for (int j = 0; j < MAX_SUPEMON; j++) {
         free(player.supemons[j]);
     }
+    printf("partie Sauvegarder\n");
+    printf("Memoire liberer\n");
 
     return 0;
 }

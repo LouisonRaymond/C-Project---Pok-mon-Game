@@ -35,6 +35,7 @@ CMakeFiles/SupPoke_Game.dir/main.c.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/_timeval.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/x86_64-w64-mingw32/include/pthread_time.h \
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
  C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\include/struct.h \
  C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\include/shop.h \
  C:\Users\Peon4\OneDrive\Documents\GitHub\C-Project---Pok-mon-Game\SupPoke_Game\SupPoke_Game\SupPoke\ Game\include/supinit.h \

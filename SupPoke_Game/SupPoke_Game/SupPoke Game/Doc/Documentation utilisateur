@@ -1,0 +1,29 @@
+#Pour ce projet C, il s'agit d'un SUPEMON game adoptant le même principe que le jeu pokémon.
+
+#Quand vous lancer le jeu, le professeur vous accueil et vous de demande de choisir un pseudo.
+
+#Vous allez ensuite commencer la partie; vous devez en tant que joueur choisir l'un  des trois supemons disponibles depuis le départ.
+#Vous pourrez alors choisir entre aller dans la nature affronter des supemons, aller à la boutique et acheter des items si vous avez des pièces , pièces qui s'obtiennent en gagnant des combats contre des pokemons ou en revendant des objets dasn la boutique.Ou alors aller dans le centre de supemon, dans le sac pour voir vos items, changer de supemons ou alors quitter.
+
+#Si le joueur choisi d'aller dans la nature, il va devoir ensuite choisir entre combattre un supemon, essayer de l'attraper ou s'enfuir. Il peut bien sur aussi choisir de regarder son inventaire(sac) ou alors changer de supemons.
+
+#Si vous décidez de combattre, c'est un système de tour par tour contre un supemon sauvage et vous aller essayer de battre ce supemon les states et les attaques dont vous disposerez.
+
+#Si vous aller dans la boutique, vous avez le choix entre acheter, vendre ou quitter le shop.
+
+#Ensuite, le joueur peut décider d'aller dans le centre de supemon ou il pourra voir tous les supemons qu'il a en sa possession sachant que le maximum de supemons que le joueur peut posséder est 6. Il pourra ensuite décider de soigner ses supemons si besoin ou de partir.
+
+#Pour finir, le joueur peut décider de sauvegarder sa partie dans un fichier, qui pourra être chargé plus tard pour récupérér la partie du joueur la ou vous l'aurez arretée.
+
+
+
+
+
+
+
+
+
+
+
+
+

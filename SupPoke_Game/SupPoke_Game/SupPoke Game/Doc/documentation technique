@@ -1,0 +1,111 @@
+Pour ce projet C, il s'agit d'un SUPEMON game adoptant le même principe que le jeu pokémon.
+
+Nous avons réparti les fonctions importantes du programmes en 8 parties distinctes.
+Elles sont toutes disponibles dans leur formats .h et permettent de déclarer les fonctions dans celles-ci.
+
+1 : dommage.c
+
+contient différentes fonctions comme is_offensive, is_passive ou encore calculate_damage qui utilisent des structures supemon et move.
+la fonction calculate_damage utilise des pointeurs pour passer d'une fonction à une autre.
+
+La fonction execute_move exécute un mouvement sur une cible spécifique et prend en paramètre des pointeurs vers la structures :
+--> move contenant les informations du mouvement à effectuer 
+-->launcher qui pointe vers la structure supemon représentant le supemon(objet) qui va effectuer le mouvement
+-->target qui pointe vers la structure supemon représentant la cible du mouvement.
+
+Cette fonction ne retourne pas de valeur car elle modifie directement les données de la (struct)supemon passée en param.
+
+2 : fight.c
+
+contient une fonction menu_fight() permettant de choisir la fonction 1-fight, la fonction 2-bag, la fonction 3-Supemon ou encore la fonction 4-catch et la 5-run.
+
+Pour la fonction menu_run(), retourne 0 si le player réussi à s'échapper sinon 1 pour qu'il continue le combat.
+Calcul le taux de réussite grâce à la vitesse du supemon et ses states que l'on sera en train d'utiliser au combat.
+génère une valeur aléatoire entre 0 et 1 qui permet de savoir si le joueur réussi à s'échapper ou non.
+
+pour la fonction catch() :
+utilise la structure wild_supemon
+un tableau de pointeur player.supemon[i] représentant l'équipe de supemon du joueur. Nous avons utiliser un pointeur vers la struct supemon pour se faire.
+utilise MAX_SUPEMON équivalent à la taille maximum de supemon que le joueur peut avoir.
+
+Cette fonction retourne 0 si le supemon sauvage n'a pas été capturé, 1 si l'équipe du joueur est pleine (dans ces cas la il est juste vaicue) et pour finir 2 si le supemno a été capturé et ajouté à la team du joueur.
+
+Pour finir , l'une des fonctions les plus importantes, le menu_turn_by_turn_fight():
+Cette fonction prend en compte des variables globales comme les données du joueur, du supemon sauvage ou encore de leurs actions respectives.
+retourne 0 si le combat est terminé(le joueur peut avoir fui perdu ou gagné)
+retourne 1 si le combat continue
+pour commencer, on initialise le supémon sauvage puis on créer une boucle while qui fait que tant que les conditions de victoires/défaites ne sont pas remplies : on vérifie si le supemon utilisé est out, si c'est le cas propose au joueur  de changer de supemon.
+détermine aléatoirement qui commence le tour.
+
+
+3 : game.c
+
+appel toutes les fonctions implémentées dans le jeu nécessaire à sa fonctionnalité.
+menu_start()-->Cette fonction affiche un message de bienvenue et demande au joueur de saisir son nom. Le nom saisi est stocké dans la structure player
+
+menu_first_supemon()--> affiche un menu permettant au joueur de choisir parmis 3 supemons de depart, nous avons ensuite stocké ce choix dans une variable qui va initialiser le premier supemon du player, données du supemon choisi qui sont d'ailleurs mise dans la structure player.
+
+menu_menu() --> permet d'accèder au centre supemon, à la boutique, partir dans la nature etc etc
+
+menu_bag()--> affiche le contenu du sac du joueur, on utilise printf pour afficher les infos et scanf pour récupérer les choix du player lors du l'utilisation d'un/+sieurs objets.
+
+4 : save.c
+
+prend en compte plusieurs fonctions :
+-save_player qui sauvegarde les informations du joueur dans un fichier, prend en param un pointeur vers la structure player
+-load_player qui charge les informations du joueur depuis un fichier, prend en param un pointeur vers la structure player
+-save_supemon qui suavegarde  les infos d'un supemon dans un fichier, prend en param un pointeur vers la structure du supemon choisi au départ.
+-load_supemon qui charge les infos d'un supemon depuis un fichier, prend en param un pointeur vers la strucutre supemon.
+check_save_files_exist qui vérifie si les fichiers de sauvegarde existent. return True si les fichiers existent, sinon return False.
+
+5 : shop.c
+
+utilise une fonction principal menu_shop() qui comprend de sous-fonctions menu_shop_buy() et menu_shop_sell().
+menu_shop() affiche un menu du magasin ou l'on peut vendre ou acheter des items.
+menu_shop_buy() affiche un menu permettant au joueur d'acheter différents objet. return un int 0 si la fonction est correctement exécutée.
+menu_shop_sell() affiche un menu permettant au joueur de vendre différents objet. return un int 0 si la fonction est correctement exécutée.
+
+6 : supecenter.c
+
+Possède une unique fonction menu_supemon_center()
+affiche un menu ou l'on peut soigner ses supemons ou partir, nous avons aussi un affichage des supemons appartenant à la team du joueru.
+return 0 si l'utilisateur  choisit de quitter le centre ou 1 si l'utilisateur choisit de guérir ses supemons.
+pour le choix 1, on regarde si le player possède des supemons, si oui, on va utiliser un tabelau de pointeur qui va modifier les valeurs correspondante dans la struct des supemons en mettant leurs hp au max.
+
+7 : supinit.c
+
+comprend les fonctions copy_supemon() et initialize_wild_supemon().
+la fonction copy_supemon() permet de copier les attributs d'un supemon source vers un supemon destination.
+prend en paramètre un pointeur vers la struct supemon source
+prend en paramètre un pointeur vers la struct supemon de destination.
+utilisation de strcpy pour copier le nom du supemon source vers le supemon destination.
+
+la focntion initialize_wild_supemon() prend en paramètre player qui pointe vers la struct player et wild_supemon pointant vers la strcuture representant le supemon sauvage à init
+on utilise une constante qui sélectionne aléatoirement un nom de Supémon parmi la liste des 3 prédéfinies.
+on réduit légérement les stats du supemon utilisé par le joueur pour les attribuer au supemon sauvage lors du fight pour un peu de défi.
+
+8 : main.c
+
+contient +sieurs fonctions nécessaires au bon fonctionnement du jeu :
+main() qui gére le lancement du jeu, la boucle principale du jeu et la sauvegarde des données.
+
+-check_save_file_exist()--> vérifie si les fichiers de sauvegarde existent et renvoie un booléen True (si file existent) ou sinon False
+-load_player() --> charge les données du joueur à partir du fichier de sauvegarde,  prend en param un pointeur vers la struct player
+-load_supemon() --> idem que pour le joueur mais avec les supemons
+-autres fonctions contenues dans le save tel que save_supemonet save_player déjà décritent ci-dessus
+-free(player_current_supemonet) --> libère la mémoire allouée pour le supemon utilisé par le player
+-free(player.supemons[j]) --> libère la mémoire allouée par les supemons stockés dans la liste du joueur dédiée à ca. Prend en paramètre l'indice 'j' du supemon dans la liste de Supemons.
+
+Fin de la documentation technique du projet SupemonGame by Rafael and Louison.
+
+
+
+
+
+
+
+
+
+
+
+
